@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/data.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Task Manager</h1>
+    <div class="header">
+        <label for="search">Search:</label>
+        <input type="text" id="searchLabel" >
+        
+        <label for="sortBy">Sort By:</label>
+        <select id="sortBy">
+            <option value="name">Name</option>
+            <option value="email">Status</option>
+            <option value="email">Date</option>
+            <option value="email">Est. Time</option>
+        </select>
+
+        <select id="orderBy">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+            </select>
+
+        <button id="newTask">New Task</button>
+
+        <button id="category">Edit Categories</button>
+    </div>
+
+    <div id="tasks-container">
+        <!-- Task cards will be dynamically added here -->
+         <!-- <table> -->
+            <!-- <thead> -->
+                <!-- <tr> -->
+                    <!-- <td>Name</td>
+                    <td>Status</td>
+                    <td>Date</td>
+                    <td>Est. Time</td>
+                    <td>Time Spent</td> -->
+                <!-- </tr> -->
+            <!-- </thead> -->
+            <!-- <tbody id="taskTableBody"> -->
+                <!-- Task rows will be dynamically added here -->
+            <!-- </tbody> -->
+    </div>
+
+</body>
+</html>
