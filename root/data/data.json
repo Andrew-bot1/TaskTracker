@@ -16,5 +16,16 @@
       "estimatedTime": 120,
       "timeSpent": 30
     }
+  ],
+
+  "categories": [
+    {
+      "name": "cleaning",
+      "color": "#FF5733"
+    },
+    {
+      "name": "school",
+      "color": "#33C1FF"
+    }
   ]
 }
