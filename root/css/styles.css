@@ -116,8 +116,8 @@ select {
     }
 }
 
-/* this makes the table look good on mobile */
-@media (max-width: 501px) {
+
+/* @media (max-width: 501px) { */
     /* Hide the table header row */
     thead {
         display: none;
@@ -126,7 +126,8 @@ select {
     /* Turn the table into a block so rows stack */
     table, tbody, tr {
         display: block;
-        width: 100%;
+        width: 70%;
+        margin: 0 auto; 
     }
 
     /* Each row becomes a card */
@@ -183,4 +184,4 @@ select {
     td:last-child {
         justify-content: flex-end;
     }
-}
+/* } */

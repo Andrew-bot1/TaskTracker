@@ -23,16 +23,16 @@ function renderList(data) {
     if (data.tasks && data.tasks.length !== 0) {
         //
         let html = '<table>' +
-                    '<tr>' +
-                        '<th></th>' +
-                        '<th>Name</th>' +
-                        '<th>Category</th>' +
-                        '<th>Status</th>' +
-                        '<th>Due Date</th>' +
-                        '<th>Est. Time</th>' +
-                        '<th>Time Spent</th>' + 
-                        '<th></th>' +
-                    '</tr>';
+                    // '<tr>' +
+                    //     '<th></th>' +
+                    //     '<th>Name</th>' +
+                    //     '<th>Category</th>' +
+                    //     '<th>Status</th>' +
+                    //     '<th>Due Date</th>' +
+                    //     '<th>Est. Time</th>' +
+                    //     '<th>Time Spent</th>' + 
+                    //     '<th></th>' +
+                    // '</tr>';
     
         // Loop through each task and create HTML elements
         data.tasks.forEach(task => {
