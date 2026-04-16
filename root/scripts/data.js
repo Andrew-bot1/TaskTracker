@@ -31,6 +31,7 @@ function renderList(data) {
                         '<th>Due Date</th>' +
                         '<th>Est. Time</th>' +
                         '<th>Time Spent</th>' + 
+                        '<th></th>' +
                     '</tr>';
     
         // Loop through each task and create HTML elements
@@ -38,18 +39,17 @@ function renderList(data) {
             html += `
             <tr>
                     <td><button class="timer">Start Timer</button></td>
-                    <td><input type="text" value="${task.name}"></td>
-                    <td><select>
-                        ${categoriesOptions}
-                    </select></td>
-                    <td><select>
-                        <option value="not-started" style="background-color: lightgray;" ${task.status === 'Not Started' ? 'selected' : ''}>Not Started</option>
-                        <option value="in-progress" style="background-color: lightblue;" ${task.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
-                        <option value="completed" style="background-color: lightgreen;" ${task.status === 'Completed' ? 'selected' : ''}>Completed</option>
-                    </select></td>
-                    <td><input type="date" value="${task.dueDate}"></td>
-                    <td><input type="number" value="${task.estimatedTime}" min="0"> minutes</td>
-                    <td>${task.timeSpent} minutes</td>
+    <td data-label="Name"><input type="text" value="${task.name}"></td>
+    <td data-label="Category"><select>${categoriesOptions}</select></td>
+    <td data-label="Status"><select>
+        <option value="not-started" ${task.status === 'Not Started' ? 'selected' : ''}>Not Started</option>
+        <option value="in-progress" ${task.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+        <option value="completed" ${task.status === 'Completed' ? 'selected' : ''}>Completed</option>
+    </select></td>
+    <td data-label="Due Date"><input type="date" value="${task.dueDate}"></td>
+    <td data-label="Est. Time"><input type="number" value="${task.estimatedTime}" min="0"> min</td>
+    <td data-label="Spent">${task.timeSpent} min</td>
+    <td><button class="delete">Delete</button></td>
             </tr>
             `;
         

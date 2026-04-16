@@ -1,4 +1,19 @@
+.header input,
+.header select,
+.header button,
+.header label {
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+    padding: 0 10px;
+    /* background-color: #f0f0f0; */
+    height: 30px;
+    box-sizing: border-box;
+}
+
 .header {
+    align-items: center;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -54,4 +69,118 @@ select {
     
 }
 
+.new-task-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
 
+#newTask {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 24px;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* this makes the header look good on mobile */
+/* the robot did this so I need to go through it througholy and potentially change it */
+@media (max-width: 501px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch; /* makes inputs fill width */
+    }
+
+    .header input,
+    .header select,
+    .header button {
+        width: 100%;
+    }
+
+    .new-task-wrapper {
+        flex-direction: row; /* optional: keep label + button side-by-side */
+        justify-content: space-between;
+    }
+}
+
+/* this makes the table look good on mobile */
+@media (max-width: 501px) {
+    /* Hide the table header row */
+    thead {
+        display: none;
+    }
+
+    /* Turn the table into a block so rows stack */
+    table, tbody, tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* Each row becomes a card */
+    tr {
+        background: white;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        box-sizing: border-box;
+    }
+
+    /* Each cell becomes a labelled row inside the card */
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    /* Add labels using data-label attributes */
+    td::before {
+        content: attr(data-label);
+        font-weight: 500;
+        font-size: 12px;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+
+    /* Inputs/selects fill remaining space */
+    td input, td select {
+        flex: 1;
+        max-width: 60%;
+        font-size: 13px;
+    }
+
+    /* Timer and delete cells — no label needed */
+    td:first-child::before,
+    td:last-child::before {
+        content: '';
+    }
+
+    td:first-child,
+    td:last-child {
+        justify-content: flex-end;
+    }
+}
