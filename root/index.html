@@ -6,8 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/categoryModal.css">
+    <link rel="stylesheet" href="css/newTask.css">
+    <link rel="stylesheet" href="css/completedTasks.css">
     <script src="scripts/data.js" defer></script>
     <script src="scripts/categories.js" defer></script>
+    <script src="scripts/newTask.js" defer></script>
+    <script src="scripts/completedTasks.js" defer></script>
 </head>
 <body>
     <h1 class="title">Task Manager</h1>
@@ -41,15 +45,45 @@
        
     </div>
 
-    <!-- Modal for categories -->
-<div id="modalCategory" class="modal">
-
-  <!-- Modal content -->
+<!-- Modal for new task -->
+<div id="modalNewTask" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <div id="new-task-container"></div>
+    <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" ">
+        <label for="taskCategory">Task Category:</label>
+        <input type="text" id="taskCategory">
+        <label for="taskDueDate">Task Due Date:</label>
+        <input type="date" id="taskDueDate">
+        <label for="taskEstTime">Task Est. Time (mins):</label>
+        <input type="number" id="taskEstTime">
+        <label for="taskDescription">Task Description:</label>
+        <textarea id="taskDescription"></textarea>
+        <button id="addTask">Add Task</button>
+  </div>
+</div>
 
-   
+
+
+<!-- Modal for categories -->
+<div id="modalCategory" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="category-container"></div>
+  </div>
+</div>
+
+
+<button id="viewCompleted">View Completed Tasks</button>
+
+   <!-- Modal for completed tasks -->
+<div id="modalCompleted" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="completed-container"></div>
+  </div>
+</div>
 
 </body>
 </html>

@@ -68,6 +68,21 @@ select {
     cursor: pointer;
 }
 
+.btnFlip {
+    /* width: 5px;
+    height: auto; */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    /* font-size: 8px; */
+}
+
+.btnFlip img {
+    width: 40px;
+    height: auto;
+}
+
 
 /* this makes the header look good on mobile */
 /* the robot did this so I need to go through it througholy and potentially change it */
@@ -102,7 +117,7 @@ select {
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 400px;
+  height: 300px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -118,7 +133,7 @@ select {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
@@ -164,9 +179,20 @@ select {
   padding: 5px;
 }
 
+.flip-card-front .btnFlip {
+  width: 30px !important;
+}
+
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
 }

@@ -1,31 +1,51 @@
 {
   "tasks": [
     {
+      "id": 1,
       "name": "Take out the trash",
       "category": "cleaning",
       "status": "Not Started",
       "dueDate": "2023-10-10",
       "estimatedTime": 60,
       "timeSpent": 0,
-      "description": "Take out the trash to the curb for pickup."
+      "description": "Take out the trash to the curb for pickup.",
+      "categoryId": 1,
+      "completedOn": ""
     },
     {
+      "id": 2,
       "name": "Finish homework",
       "category": "school",
       "status": "In Progress",
       "dueDate": "2023-10-12",
       "estimatedTime": 120,
       "timeSpent": 30,
-      "description": "Complete math and science homework assignments."
+      "description": "Complete math and science homework assignments.",
+      "categoryId": 2,
+      "completedOn": ""
+    },
+    {
+      "id": 3,
+      "name": "Clean the kitchen",
+      "category": "cleaning",
+      "status": "Completed",
+      "dueDate": "2023-10-08",
+      "estimatedTime": 90,
+      "timeSpent": 90,
+      "description": "Wash dishes, wipe counters, and mop the floor.",
+      "categoryId": 1,
+      "completedOn": "2023-10-08"
     }
   ],
 
   "categories": [
     {
+      "id": 1,
       "name": "cleaning",
       "color": "#FF5733"
     },
     {
+      "id": 2,
       "name": "school",
       "color": "#33C1FF"
     }
