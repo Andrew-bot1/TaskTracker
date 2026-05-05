@@ -2,7 +2,7 @@ Title:
 Task Tracker
 
 How to run:
-After downloading the code, set up a local server in VS to avoid issues with fetch(). To set up a local server, type "-m http.server" in the terminal in VS. Then, type http://localhost:8000/ in your browser.
+After downloading the code, set up a local server in VS to avoid issues with fetch(). To set up a local server, type "python -m http.server" in the terminal in VS. Then, type http://localhost:8000/ in your browser.
 
 View inventory:
 The new task and edit categories buttons at the top expand a modal to allow the user to edit and add items. The completed tasks button at the bottom allows the user to see a log of completed tasks.
